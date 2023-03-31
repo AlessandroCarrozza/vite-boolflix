@@ -22,6 +22,7 @@ export default {
     input {
         width: 180px;
         padding-left: 0.5rem;
+        outline: none;
     }
 
     .btn-search {
