@@ -30,6 +30,10 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        height: 100%;
+        max-width: 1600px;
+        margin: auto;
+        padding: 0 2rem;
 
         .title {
             color: red;
