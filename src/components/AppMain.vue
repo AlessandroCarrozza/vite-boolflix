@@ -8,10 +8,10 @@ export default {
     <main>
         <div class="container">
             <h2>Testo</h2>
-            <div class="wrapper-films">testo</div>
+            <div class="wrapper films">testo</div>
 
             <h2>testo</h2>
-            <div class="wrapper-series">testo</div>
+            <div class="wrapper series">testo</div>
         </div>
     </main>
 </template>
@@ -27,6 +27,10 @@ main {
         max-width: 1400px;
         padding: 0 2rem;
         margin: auto;
+
+        .wrapper {
+            padding-bottom: 1rem;
+        }
     }
 }
 </style>

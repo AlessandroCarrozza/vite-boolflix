@@ -1,12 +1,20 @@
 <script>
+import { store } from "../store"
+
 export default {
     name: "AppSearch",
+
+    data() {
+        return {
+            store,
+        }
+    }
 }
 </script>
 
 <template>
     <div class="input-search">
-        <input type="text" placeholder="Cerca un film o una serie">
+        <input type="text" placeholder="Cerca un film o una serie" v-model="store.searchText">
         <span class="btn-search">Cerca</span>
     </div>
 </template>
