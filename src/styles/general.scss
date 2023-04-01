@@ -6,6 +6,38 @@
 }
 
 // MAIN RULES
+header {
+    height: 80px;
+    background-color: black;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        max-width: 1600px;
+        margin: auto;
+        padding: 0 2rem;
+
+        .title {
+            color: red;
+        }
+    }
+
+}
+
+
 main {
     background-color: grey;
+    padding: 2rem 0;
+
+    .films-container {
+        max-width: 1400px;
+        padding: 0 2rem;
+        margin: auto;
+
+        .wrapper {
+            padding-bottom: 1rem;
+        }
+    }
 }

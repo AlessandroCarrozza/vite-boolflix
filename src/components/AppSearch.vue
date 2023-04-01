@@ -1,5 +1,5 @@
 <script>
-import { store } from "../store"
+import { store } from "../store";
 
 export default {
     name: "AppSearch",
@@ -15,7 +15,7 @@ export default {
 <template>
     <div class="input-search">
         <input type="text" placeholder="Cerca un film o una serie" v-model="store.searchText">
-        <span class="btn-search">Cerca</span>
+        <span class="btn-search" @click="$emit('showFilms')">Cerca</span>
     </div>
 </template>
 
