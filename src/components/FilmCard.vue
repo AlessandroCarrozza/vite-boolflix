@@ -2,11 +2,22 @@
 
 export default {
     name: "FilmCard",
+    props: {
+        title: String,
+        originalTitle: String,
+        language: String,
+        avarage: String,
+    }
 }
 </script>
 
 <template>
-    <div class="film"></div>
+    <div class="film">
+        <h1>{{ title }}</h1>
+        <h2>{{ originalTitle }}</h2>
+        <h3>{{ language }}</h3>
+        <h4>{{ avarage }}</h4>
+    </div>
 </template>
 
 <style scoped lang="scss">

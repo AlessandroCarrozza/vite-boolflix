@@ -19,7 +19,9 @@ export default {
     <div class="films-container">
         <h2>Film</h2>
         <div class="wrapper films">
-            <FilmCard v-for="(film, index) in store.filmsList"></FilmCard>
+            <FilmCard v-for="(film, index) in store.filmsList" :title="film.title" :originalTitle="film.original_title"
+                :language="film.original_language" :avarage="vote_average">
+            </FilmCard>
         </div>
     </div>
 </template>
