@@ -38,6 +38,9 @@ main {
 
         .wrapper {
             padding-bottom: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
     }
 }

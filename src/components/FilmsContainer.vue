@@ -1,14 +1,26 @@
 <script>
+import FilmCard from "./FilmCard.vue";
+import { store } from "../store";
 
 export default {
     name: "FilmsContainer",
+    components: {
+        FilmCard,
+    },
+    data() {
+        return {
+            store,
+        }
+    }
 }
 </script>
 
 <template>
     <div class="films-container">
-        <h2>Testo</h2>
-        <div class="wrapper films">testo</div>
+        <h2>Film</h2>
+        <div class="wrapper films">
+            <FilmCard v-for="(film, index) in store.filmsList"></FilmCard>
+        </div>
     </div>
 </template>
 
