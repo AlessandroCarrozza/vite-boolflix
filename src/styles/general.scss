@@ -28,8 +28,13 @@ header {
 
 
 main {
-    background-color: grey;
+    background-color: lightgrey;
+    min-height: calc(100vh - 80px);
     padding: 2rem 0;
+
+    .title-start {
+        text-align: center;
+    }
 
     .films-container {
         max-width: 1400px;
@@ -41,6 +46,10 @@ main {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+        }
+
+        .image {
+            width: 100%;
         }
     }
 }

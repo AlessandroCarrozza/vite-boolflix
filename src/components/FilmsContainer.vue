@@ -17,10 +17,11 @@ export default {
 
 <template>
     <div class="films-container">
-        <h2>Film</h2>
+        <h2 v-if="store.filmsList.length > 0">Film</h2>
         <div class="wrapper films">
-            <FilmCard v-for="(film, index) in store.filmsList" :title="film.title" :originalTitle="film.original_title"
-                :language="film.original_language" :avarage="vote_average">
+            <FilmCard v-for="(film, index) in store.filmsList" :key="index" :title="film.title"
+                :originalTitle="film.original_title" :language="film.original_language" :average="film.vote_average / 2"
+                :img="film.poster_path">
             </FilmCard>
         </div>
     </div>

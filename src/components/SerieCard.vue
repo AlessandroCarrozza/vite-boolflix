@@ -14,8 +14,9 @@ export default {
 </script>
 
 <template>
-    <div class="film">
+    <div class="serie">
         <img class="image" :src="'https://image.tmdb.org/t/p/w342' + img" alt="">
+
         <h1>{{ title }}</h1>
         <h2>{{ originalTitle }}</h2>
 
@@ -28,9 +29,9 @@ export default {
 <style scoped lang="scss">
 @use "../styles/general.scss";
 
-.film {
+.serie {
     width: 250px;
-    background-color: red;
+    background-color: green;
     margin: 1rem;
 }
 </style>
