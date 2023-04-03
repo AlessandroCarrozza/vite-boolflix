@@ -16,12 +16,12 @@ export default {
 </script>
 
 <template>
-    <div class="films-container">
+    <div class="series-container">
         <h2 v-if="store.seriesList.length > 0">Serie</h2>
         <div class="wrapper series">
             <SerieCard v-for="(serie, index) in store.seriesList" :key="index" :title="serie.name"
                 :originalTitle="serie.original_name" :language="serie.original_language" :average="serie.vote_average / 2"
-                :img="serie.poster_path">
+                :image="serie.poster_path">
             </SerieCard>
         </div>
     </div>

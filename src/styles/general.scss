@@ -30,13 +30,14 @@ header {
 main {
     background-color: lightgrey;
     min-height: calc(100vh - 80px);
-    padding: 2rem 0;
+    // padding: 2rem 0;
 
     .title-start {
         text-align: center;
     }
 
-    .films-container {
+    .films-container,
+    .series-container {
         max-width: 1400px;
         padding: 0 2rem;
         margin: auto;
@@ -46,15 +47,63 @@ main {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+
+            .image {
+                width: 100%;
+                height: 380px;
+            }
+
+            .original-title {
+                font-size: 1rem;
+            }
+
+            .flag {
+                width: 50px;
+                height: 33px;
+            }
         }
 
-        .image {
-            width: 100%;
-            height: 370px;
+        .film,
+        .serie {
+            width: 250px;
+            margin: 1rem;
+            perspective: 1000px;
+
+            .card {
+                position: relative;
+                width: 100%;
+                // height: 100%;
+                text-align: center;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+
+                .flip-card-front,
+                .flip-card-back {
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                }
+
+                .flip-card-front {
+                    background-color: #bbb;
+                    color: black;
+                }
+
+                .flip-card-back {
+                    background-color: #2980b9;
+                    color: white;
+                    transform: rotateY(180deg);
+                    position: absolute;
+                    width: 100%;
+                    top: 0;
+                    bottom: 0;
+                }
+            }
+
+            &:hover .card {
+                transform: rotateY(180deg);
+            }
         }
 
-        .original-title {
-            font-size: 1rem;
-        }
+
     }
 }
