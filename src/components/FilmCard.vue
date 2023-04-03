@@ -32,12 +32,12 @@ export default {
 
 
             <div class="flip-card-back">
-                <div class="sub-title">Titolo:</div>
+                <div class="sub-title col-red">Titolo:</div>
                 <h1 class="title">{{ title }}</h1>
 
 
 
-                <div class="sub-title">Titolo originale:</div>
+                <div class="sub-title col-red">Titolo originale:</div>
                 <h2 class="original-title">{{ originalTitle }}</h2>
 
 
@@ -57,7 +57,7 @@ export default {
 
 
                 <div v-if="overview.length > 0">
-                    <div class="sub-title">Trama:</div>
+                    <div class="sub-title col-red">Trama:</div>
                     <p>{{ overview }}</p>
                 </div>
                 <div v-else>Trama non disponibile</div>

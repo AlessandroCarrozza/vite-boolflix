@@ -6,6 +6,12 @@
     font-family: sans-serif;
 }
 
+
+// utility
+.col-red {
+    color: red;
+}
+
 // MAIN RULES
 header {
     height: 80px;
@@ -36,8 +42,7 @@ main {
         text-align: center;
     }
 
-    .films-container,
-    .series-container {
+    .container {
         max-width: 1400px;
         padding: 0 2rem;
         margin: auto;
@@ -88,7 +93,7 @@ main {
                 }
 
                 .flip-card-back {
-                    background-color: #2980b9;
+                    background-color: black;
                     color: white;
                     transform: rotateY(180deg);
                     position: absolute;

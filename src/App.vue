@@ -1,15 +1,13 @@
 <script>
 import AppSearch from "./components/AppSearch.vue";
-import FilmsContainer from "./components/FilmsContainer.vue";
-import SeriesContainer from "./components/SeriesContainer.vue";
+import CardsList from "./components/CardsList.vue";
 import axios from "axios";
 import { store } from "./store";
 
 export default {
   components: {
     AppSearch,
-    FilmsContainer,
-    SeriesContainer,
+    CardsList,
   },
   data() {
     return {
@@ -54,8 +52,7 @@ export default {
   <main>
     <h1 class="title-start" v-if="store.filmsList.length == 0 && store.seriesList.length == 0">Cerca un film o una serie
       TV</h1>
-    <FilmsContainer></FilmsContainer>
-    <SeriesContainer></SeriesContainer>
+    <CardsList></CardsList>
   </main>
 </template>
 
