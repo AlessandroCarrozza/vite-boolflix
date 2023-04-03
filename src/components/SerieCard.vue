@@ -23,16 +23,9 @@ export default {
 
         <h3>{{ language }}</h3>
 
-        <i v-if="Math.ceil(average) >= 1" class="fa-solid fa-star"></i>
-        <i v-else class="fa-regular fa-star"></i>
-        <i v-if="Math.ceil(average) >= 2" class="fa-solid fa-star"></i>
-        <i v-else class="fa-regular fa-star"></i>
-        <i v-if="Math.ceil(average) >= 3" class="fa-solid fa-star"></i>
-        <i v-else class="fa-regular fa-star"></i>
-        <i v-if="Math.ceil(average) >= 4" class="fa-solid fa-star"></i>
-        <i v-else class="fa-regular fa-star"></i>
-        <i v-if="Math.ceil(average) >= 5" class="fa-solid fa-star"></i>
-        <i v-else class="fa-regular fa-star"></i>
+        <i v-if="Math.ceil(average) != 0" v-for="star, index in 5" class=" fa-star"
+            :class="Math.ceil(average) > index ? 'fa-solid' : 'fa-regular'"></i>
+        <h3 v-else>Media voti non disponibile</h3>
     </div>
 </template>
 
