@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     generateFilms() {
-      let urlFilms = "https://api.themoviedb.org/3/search/movie?api_key=a9828f321f8e3d3034e0951224f59b30";
+      let urlFilms = "https://api.themoviedb.org/3/search/movie?api_key=a9828f321f8e3d3034e0951224f59b30&language=it-IT";
       axios.get(`${urlFilms}&query=${this.store.searchText}`)
         .then(response => {
           this.store.filmsList = response.data.results;
@@ -26,7 +26,7 @@ export default {
         })
     },
     generateSeries() {
-      let urlSeries = "https://api.themoviedb.org/3/search/tv?api_key=a9828f321f8e3d3034e0951224f59b30";
+      let urlSeries = "https://api.themoviedb.org/3/search/tv?api_key=a9828f321f8e3d3034e0951224f59b30&language=it-IT";
       axios.get(`${urlSeries}&query=${this.store.searchText}`)
         .then(response => {
           this.store.seriesList = response.data.results;
@@ -47,12 +47,13 @@ export default {
     <div class="container">
       <h1 class="title">BOOLFLIX</h1>
 
-      <AppSearch @showFilms="generateContent"></AppSearch>
+      <AppSearch @showFilms="generateContent" @showFilmsEnter="generateContent"></AppSearch>
     </div>
   </header>
 
   <main>
-    <h1 class="title-start" v-if="store.filmsList.length == 0 || store.seriesList == 0">Cerca un film o una serie TV</h1>
+    <h1 class="title-start" v-if="store.filmsList.length == 0 && store.seriesList.length == 0">Cerca un film o una serie
+      TV</h1>
     <FilmsContainer></FilmsContainer>
     <SeriesContainer></SeriesContainer>
   </main>
@@ -63,5 +64,3 @@ export default {
 @use "./styles/general.scss";
 </style>
 
-
-<!-- https://api.themoviedb.org/3/search/movie?api_key=a9828f321f8e3d3034e0951224f59b30&query=star -->

@@ -9,20 +9,30 @@ export default {
         average: Number,
         img: String,
         key: Number,
-    }
+    },
 }
 </script>
 
 <template>
     <div class="serie">
-        <img class="image" :src="'https://image.tmdb.org/t/p/w342' + img" alt="">
+        <img v-if="img != null" class="image" :src="'https://image.tmdb.org/t/p/w342' + img" alt="">
+        <img v-else class="image empty" src="../../public/film-empty.webp" alt="">
 
         <h1>{{ title }}</h1>
-        <h2>{{ originalTitle }}</h2>
+        <h2 class="original-title">{{ originalTitle }}</h2>
 
         <h3>{{ language }}</h3>
 
-        <h4>{{ average }}</h4>
+        <i v-if="Math.ceil(average) >= 1" class="fa-solid fa-star"></i>
+        <i v-else class="fa-regular fa-star"></i>
+        <i v-if="Math.ceil(average) >= 2" class="fa-solid fa-star"></i>
+        <i v-else class="fa-regular fa-star"></i>
+        <i v-if="Math.ceil(average) >= 3" class="fa-solid fa-star"></i>
+        <i v-else class="fa-regular fa-star"></i>
+        <i v-if="Math.ceil(average) >= 4" class="fa-solid fa-star"></i>
+        <i v-else class="fa-regular fa-star"></i>
+        <i v-if="Math.ceil(average) >= 5" class="fa-solid fa-star"></i>
+        <i v-else class="fa-regular fa-star"></i>
     </div>
 </template>
 
@@ -31,7 +41,7 @@ export default {
 
 .serie {
     width: 250px;
-    background-color: green;
     margin: 1rem;
+    border: 3px solid green;
 }
 </style>
