@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 // MAIN RULES
@@ -30,7 +31,6 @@ header {
 main {
     background-color: lightgrey;
     min-height: calc(100vh - 80px);
-    // padding: 2rem 0;
 
     .title-start {
         text-align: center;
@@ -60,6 +60,7 @@ main {
             .flag {
                 width: 50px;
                 height: 33px;
+                margin: 0.5rem 0;
             }
         }
 
@@ -72,7 +73,6 @@ main {
             .card {
                 position: relative;
                 width: 100%;
-                // height: 100%;
                 text-align: center;
                 transition: transform 0.6s;
                 transform-style: preserve-3d;
@@ -84,7 +84,6 @@ main {
                 }
 
                 .flip-card-front {
-                    background-color: #bbb;
                     color: black;
                 }
 
@@ -96,6 +95,20 @@ main {
                     width: 100%;
                     top: 0;
                     bottom: 0;
+                    padding: 1rem;
+                    overflow-y: auto;
+                }
+
+                .title {
+                    font-size: 1rem;
+                }
+
+                .original-title {
+                    font-size: 0.8rem;
+                }
+
+                .sub-title {
+                    padding-top: 0.5rem;
                 }
             }
 

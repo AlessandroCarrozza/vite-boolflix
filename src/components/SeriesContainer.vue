@@ -21,7 +21,7 @@ export default {
         <div class="wrapper series">
             <SerieCard v-for="(serie, index) in store.seriesList" :key="index" :title="serie.name"
                 :originalTitle="serie.original_name" :language="serie.original_language" :average="serie.vote_average / 2"
-                :image="serie.poster_path">
+                :image="serie.poster_path" :overview="serie.overview">
             </SerieCard>
         </div>
     </div>

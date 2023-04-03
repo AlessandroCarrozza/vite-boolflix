@@ -9,6 +9,7 @@ export default {
         language: String,
         average: Number,
         image: String,
+        overview: String,
         key: Number,
     },
     data() {
@@ -29,7 +30,7 @@ export default {
 
 
             <div class="flip-card-back">
-                <h1>{{ title }}</h1>
+                <h1 class="title">{{ title }}</h1>
                 <h2 class="original-title">{{ originalTitle }}</h2>
 
                 <img class="flag" v-if="store.flags.includes(language)" :src="'../../public/' + language + '-flag.png'"
@@ -41,6 +42,7 @@ export default {
                         :class="Math.ceil(average) > index ? 'fa-solid' : 'fa-regular'"></i>
                 </div>
                 <h3 v-else>Media voti non disponibile</h3>
+
             </div>
         </div>
     </div>

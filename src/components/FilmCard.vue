@@ -9,6 +9,7 @@ export default {
         language: String,
         average: Number,
         image: String,
+        overview: String,
         key: Number,
     },
     data() {
@@ -31,18 +32,36 @@ export default {
 
 
             <div class="flip-card-back">
-                <h1>{{ title }}</h1>
+                <div class="sub-title">Titolo:</div>
+                <h1 class="title">{{ title }}</h1>
+
+
+
+                <div class="sub-title">Titolo originale:</div>
                 <h2 class="original-title">{{ originalTitle }}</h2>
+
+
 
                 <img class="flag" v-if="store.flags.includes(language)" :src="'../../public/' + language + '-flag.png'"
                     alt="">
                 <h3 v-else>{{ language }}</h3>
+
+
 
                 <div v-if="Math.ceil(average) != 0">
                     <i v-for="star, index in 5" class=" fa-star"
                         :class="Math.ceil(average) > index ? 'fa-solid' : 'fa-regular'"></i>
                 </div>
                 <h3 v-else>Media voti non disponibile</h3>
+
+
+
+                <div v-if="overview.length > 0">
+                    <div class="sub-title">Trama:</div>
+                    <p>{{ overview }}</p>
+                </div>
+                <div v-else>Trama non disponibile</div>
+
             </div>
         </div>
 
