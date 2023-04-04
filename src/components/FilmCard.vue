@@ -10,6 +10,7 @@ export default {
         average: Number,
         image: String,
         overview: String,
+        genres: Array,
         key: Number,
     },
     data() {
@@ -50,6 +51,10 @@ export default {
                         :class="Math.ceil(average) > index ? 'fa-solid' : 'fa-regular'"></i>
                 </div>
                 <h3 v-else>Media voti non disponibile</h3>
+
+                <div class="genres">
+                    <span v-for="genre in genres">{{ genre }},</span>
+                </div>
 
 
                 <div v-if="overview.length > 0">

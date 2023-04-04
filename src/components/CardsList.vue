@@ -23,7 +23,7 @@ export default {
         <div class="wrapper films">
             <FilmCard v-for="(film, index) in store.filmsList" :key="index" :title="film.title"
                 :originalTitle="film.original_title" :language="film.original_language" :average="film.vote_average / 2"
-                :image="film.poster_path" :overview="film.overview">
+                :image="film.poster_path" :overview="film.overview" :genres="film.genre_ids">
             </FilmCard>
         </div>
 
