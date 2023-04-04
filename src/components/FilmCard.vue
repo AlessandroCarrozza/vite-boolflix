@@ -54,11 +54,11 @@ export default {
 
 
                 <div class="sub-title">Generi:</div>
-                <div class="genres" v-for="(genre, index) in store.genresList">
-                    <span v-for="genreId in genres">
+                <div class="genres" v-for="genre in store.genresList">
+                    <span v-for="(genreId, index) in genres">
                         <span v-if="genreId == genre.id">
                             <span>{{ genre.name }}</span>
-                            <span>,</span>
+                            <span v-if="index < (genres.length - 1)">,</span>
                         </span>
                     </span>
                 </div>
