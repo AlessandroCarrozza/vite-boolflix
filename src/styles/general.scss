@@ -7,11 +7,6 @@
 }
 
 
-// utility
-.col-red {
-    color: red;
-}
-
 // MAIN RULES
 header {
     height: 80px;
@@ -26,8 +21,8 @@ header {
         margin: auto;
         padding: 0 2rem;
 
-        .title {
-            color: red;
+        .logo-name {
+            color: #e50914;
         }
     }
 
@@ -40,6 +35,7 @@ main {
 
     .title-start {
         text-align: center;
+        padding: 2rem 0;
     }
 
     .container {
@@ -48,31 +44,14 @@ main {
         margin: auto;
 
         .wrapper {
-            padding-bottom: 1rem;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-
-            .image {
-                width: 100%;
-                height: 380px;
-            }
-
-            .original-title {
-                font-size: 1rem;
-            }
-
-            .flag {
-                width: 50px;
-                height: 33px;
-                margin: 0.5rem 0;
-            }
         }
 
         .film,
         .serie {
-            width: 250px;
-            margin: 1rem;
+            width: calc(100% / 5);
+            height: 100%;
             perspective: 1000px;
 
             .card {
@@ -90,6 +69,11 @@ main {
 
                 .flip-card-front {
                     color: black;
+
+                    .image {
+                        width: 100%;
+                        height: 400px;
+                    }
                 }
 
                 .flip-card-back {
@@ -102,23 +86,47 @@ main {
                     bottom: 0;
                     padding: 1rem;
                     overflow-y: auto;
+
+                    .title {
+                        font-size: 1.2rem;
+                    }
+
+                    .original-title {
+                        font-size: 1rem;
+                    }
+
+                    .flag {
+                        width: 50px;
+                        height: 33px;
+                        margin: 0.5rem 0;
+                    }
+
+                    .lang {
+                        padding: 0.5rem 0;
+                    }
+
+                    i.fa-star {
+                        font-family: "Font Awesome 5 Free";
+                        color: #ffbd00;
+                    }
+
+                    .sub-title {
+                        padding-top: 0.5rem;
+                        color: #e50914;
+                        font-weight: 600;
+                    }
+
+                    .overview {
+                        font-size: 0.8rem;
+                    }
+
+                    .not-overview {
+                        padding: 1rem 0;
+                    }
+
                 }
 
-                i.fa-star {
-                    font-family: "Font Awesome 5 Free";
-                }
 
-                .title {
-                    font-size: 1rem;
-                }
-
-                .original-title {
-                    font-size: 0.8rem;
-                }
-
-                .sub-title {
-                    padding-top: 0.5rem;
-                }
             }
 
             &:hover .card {

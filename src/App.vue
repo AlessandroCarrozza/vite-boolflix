@@ -43,9 +43,9 @@ export default {
 <template>
   <header>
     <div class="container">
-      <h1 class="title">BOOLFLIX</h1>
+      <h1 class="logo-name">BOOLFLIX</h1>
 
-      <AppSearch @showFilms="generateContent" @showFilmsEnter="generateContent"></AppSearch>
+      <AppSearch @showContent="generateContent" @showContentEnter="generateContent"></AppSearch>
     </div>
   </header>
 
