@@ -2,7 +2,7 @@
 import { store } from "../store";
 
 export default {
-    name: "AppSearch",
+    name: "AppHeader",
 
     data() {
         return {
@@ -13,11 +13,17 @@ export default {
 </script>
 
 <template>
-    <div class="input-search">
-        <input type="text" placeholder="Cerca un film o una serie" v-model="store.searchText"
-            @keyup.enter="$emit('showContentEnter')">
-        <span class="btn-search" @click="$emit('showContent')">Cerca</span>
-    </div>
+    <header>
+        <div class="container">
+            <h1 class="logo-name">BOOLFLIX</h1>
+
+            <div class="input-search">
+                <input type="text" placeholder="Cerca un film o una serie" v-model="store.searchText"
+                    @keyup.enter="$emit('showContentEnter')">
+                <span class="btn-search" @click="$emit('showContent')">Cerca</span>
+            </div>
+        </div>
+    </header>
 </template>
 
 <style scoped lang="scss">
