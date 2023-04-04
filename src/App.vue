@@ -31,10 +31,19 @@ export default {
           console.log(this.store.seriesList);
         })
     },
+    getGenres() {
+      let urlGenres = "https://api.themoviedb.org/3/genre/movie/list?api_key=a9828f321f8e3d3034e0951224f59b30";
+      axios.get(urlGenres)
+        .then(response => {
+          this.store.genresList = response.data.genres;
+          console.log(this.store.genresList);
+        })
+    },
     generateContent() {
       this.generateFilms();
       this.generateSeries();
-    }
+      this.getGenres();
+    },
   }
 }
 </script>

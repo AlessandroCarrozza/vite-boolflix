@@ -17,7 +17,7 @@ export default {
         return {
             store,
         }
-    }
+    },
 }
 </script>
 
@@ -52,8 +52,15 @@ export default {
                 </div>
                 <h3 v-else>Media voti non disponibile</h3>
 
-                <div class="genres">
-                    <span v-for="genre in genres">{{ genre }},</span>
+
+                <div class="sub-title">Generi:</div>
+                <div class="genres" v-for="genre in store.genresList">
+                    <span v-for="(genreId, index) in genres">
+                        <span v-if="genreId == genre.id">
+                            <span>{{ genre.name }}</span>
+                            <span v-if="store.genresList.length != (index - 1)">,</span>
+                        </span>
+                    </span>
                 </div>
 
 
