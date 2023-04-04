@@ -1,3 +1,6 @@
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+
 // DEFAULT RULES
 * {
     margin: 0;
@@ -8,34 +11,15 @@
 
 
 // MAIN RULES
-header {
-    height: 80px;
-    background-color: black;
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-        max-width: 1600px;
-        margin: auto;
-        padding: 0 2rem;
-
-        .logo-name {
-            color: #e50914;
-        }
-    }
-
-}
-
 
 main {
-    background-color: lightgrey;
-    min-height: calc(100vh - 80px);
+    background-color: $bg-color;
+    min-height: 100vh;
+    padding-top: 80px;
 
     .title-start {
         text-align: center;
-        padding: 2rem 0;
+        padding-top: 2rem;
     }
 
     .container {
@@ -68,7 +52,7 @@ main {
                 }
 
                 .flip-card-front {
-                    color: black;
+                    color: $blk-color;
 
                     .image {
                         width: 100%;
@@ -77,8 +61,8 @@ main {
                 }
 
                 .flip-card-back {
-                    background-color: black;
-                    color: white;
+                    background-color: $blk-color;
+                    color: $wht-color;
                     transform: rotateY(180deg);
                     position: absolute;
                     width: 100%;
@@ -107,12 +91,12 @@ main {
 
                     i.fa-star {
                         font-family: "Font Awesome 5 Free";
-                        color: #ffbd00;
+                        color: $stars-color;
                     }
 
                     .sub-title {
                         padding-top: 0.5rem;
-                        color: #e50914;
+                        color: $primary-color;
                         font-weight: 600;
                     }
 
