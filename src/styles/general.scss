@@ -34,7 +34,7 @@ main {
 
         .film,
         .serie {
-            width: calc(100% / 5);
+            // width: calc(100% / 5);
             height: 100%;
             perspective: 1000px;
 
@@ -127,5 +127,47 @@ main {
         }
 
 
+    }
+}
+
+@media screen and (min-width: 1201px) {
+
+    .film,
+    .serie {
+        width: calc(100% / 5);
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .film,
+    .serie {
+        width: calc(100% / 4);
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .film,
+    .serie {
+        width: calc(100% / 3);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .film,
+    .serie {
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 476px) {
+
+    .film,
+    .serie {
+        width: calc(100% / 1);
     }
 }

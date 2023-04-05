@@ -57,8 +57,7 @@ export default {
                 <div class="genres" v-for="genre in store.filmGenresList" v-if="genres.length > 0">
                     <span v-for="(genreId, index) in genres">
                         <span v-if="genreId == genre.id">
-                            <span>{{ genre.name }}</span>
-                            <span v-if="genres.length > 1">,&nbsp</span>
+                            <span>{{ genre.name }}&nbsp</span>
                         </span>
                     </span>
                 </div>

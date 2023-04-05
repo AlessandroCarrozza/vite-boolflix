@@ -6,4 +6,5 @@ export const store = reactive({
     flags: ["it", "en", "de", "es", "ja", "pt", "fr"],
     filmGenresList: "",
     serieGenresList: "",
+    contentGenres: [],
 })
