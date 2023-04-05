@@ -10,6 +10,7 @@ export default {
         average: Number,
         image: String,
         overview: String,
+        genres: Array,
         key: Number,
     },
     data() {
@@ -48,6 +49,16 @@ export default {
                         :class="Math.ceil(average) > index ? 'fa-solid' : 'fa-regular'"></i>
                 </div>
                 <h3 v-else>Media voti non disponibile</h3>
+
+                <div class="sub-title">Generi:</div>
+                <div class="genres" v-for="genre in store.serieGenresList" v-if="genres.length > 0">
+                    <span v-for="(genreId, index) in genres">
+                        <span v-if="genreId == genre.id">
+                            <span>{{ genre.name }}&nbsp</span>
+                        </span>
+                    </span>
+                </div>
+                <div class="not-genre" v-else>Nessun genere da mostrare</div>
 
 
                 <div v-if="overview.length > 0">

@@ -58,7 +58,7 @@ header {
         }
 
         .input-search {
-            width: 250px;
+            width: 380px;
             height: 35px;
             display: flex;
 
@@ -74,6 +74,11 @@ header {
                 @include flex-center;
                 color: $wht-color;
                 cursor: pointer;
+            }
+
+            select {
+                width: 130px;
+                text-align: center;
             }
         }
     }
