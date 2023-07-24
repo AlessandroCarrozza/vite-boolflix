@@ -3,7 +3,7 @@ import { store } from "../store";
 
 export default {
     name: "AppHeader",
-
+    emits: ["showContent"],
     data() {
         return {
             store,
@@ -21,7 +21,7 @@ export default {
 
             <div class="input-search">
                 <input type="text" placeholder="Cerca un film o una serie" v-model="store.searchText"
-                    @keyup.enter="$emit('showContentEnter')">
+                    @keyup.enter="$emit('showContent')">
                 <span class="btn-search" @click="$emit('showContent')">Cerca</span>
             </div>
         </div>

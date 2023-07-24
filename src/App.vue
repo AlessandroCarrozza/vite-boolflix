@@ -59,7 +59,7 @@ export default {
 
 
 <template>
-  <AppHeader @showContent="generateContent" @showContentEnter="generateContent"></AppHeader>
+  <AppHeader @showContent="generateContent"></AppHeader>
 
   <main>
     <h1 class="title-start" v-if="store.filmsList.length == 0 && store.seriesList.length == 0">Cerca un film o una serie
